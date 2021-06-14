@@ -4,11 +4,8 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def game():
-    #rows = int(request.args.get('rows'))
-    #cols = int(request.args.get('cols'))
-
-    return render_template('index.html')#, rows=rows, cols=cols)
+def index():
+    return render_template('index.html')
 
 
 if __name__ == '__main__':

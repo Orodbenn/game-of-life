@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <title>Game of Life</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}" defer></script>
 </head>
 <body>
     <h1>Welcome to the Game of Life!</h1>
+    <div id="grid-container">
+        {% for height_index in range(height) %}
+            <div class="rows">
+                {% for width_index in range(width) %}
+                    <div class="cells uncolored" data-row="{{ height_index }}" data-col="{{ width_index }}"></div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>

@@ -1,3 +1,29 @@
 h1 {
     text-align: center;
 }
+
+#grid-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: solid 1px black;
+}
+
+#grid-container .rows {
+    display: flex;
+}
+
+#grid-container .rows .cells {
+    margin: 0px;
+    padding: 15px;
+}
+
+.uncolored {
+    background-color: white;
+    border: solid 1px black;
+}
+
+.colored {
+    background-color: black;
+    border: solid 1px white;
+}
